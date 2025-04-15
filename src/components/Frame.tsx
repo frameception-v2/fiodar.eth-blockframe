@@ -12,17 +12,26 @@ import {
 import { Label } from "~/components/ui/label";
 import { useFrameSDK } from "~/hooks/useFrameSDK";
 
-function ExampleCard() {
+function BlockstoriesCard() {
+  const handleClick = () => {
+    window.location.href = "https://www.blockstories.de";
+  };
+
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Welcome to the Frame Template</CardTitle>
+        <CardTitle>Welcome to Blockstories</CardTitle>
         <CardDescription>
-          This is an example card that you can customize or remove
+          Click below to visit our website
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <Label>Place content in a Card here.</Label>
+        <button 
+          onClick={handleClick}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Visit Blockstories
+        </button>
       </CardContent>
     </Card>
   );
@@ -37,7 +46,7 @@ export default function Frame() {
 
   return (
     <div className="w-[300px] mx-auto py-2 px-2">
-      <ExampleCard />
+      <BlockstoriesCard />
     </div>
   );
 }
