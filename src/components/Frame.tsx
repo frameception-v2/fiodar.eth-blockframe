@@ -11,10 +11,11 @@ import {
 
 import { Label } from "~/components/ui/label";
 import { useFrameSDK } from "~/hooks/useFrameSDK";
+import { BLOCKSTORIES_URL } from "~/lib/constants";
 
 function BlockstoriesCard() {
   const handleClick = () => {
-    window.location.href = "https://www.blockstories.de";
+    window.location.href = BLOCKSTORIES_URL;
   };
 
   return (
